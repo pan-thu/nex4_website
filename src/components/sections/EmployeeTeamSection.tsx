@@ -101,7 +101,7 @@ export const EmployeeTeamSection = () => {
             >
               {[
                 { value: '15+', label: 'Years Experience' },
-                { value: '98%', label: 'Success Rate' },
+                { value: '100%', label: 'Success Rate' },
                 { value: '24/7', label: 'Support' },
               ].map((stat, index) => (
                 <motion.div
