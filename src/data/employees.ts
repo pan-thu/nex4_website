@@ -5,7 +5,7 @@ export const employeeData: Employee[] = [
     id: 'kaung-htet-zaw',
     name: 'Kaung Htet Zaw',
     position: 'Director (Business Development)',
-    image: '/images/team/employees/kaung_htet_zaw.png',
+    image: '/images/team/employees/kaung_htet_zaw.jpg',
   },
   {
     id: 'aung-pyae-phyo-thu',
@@ -42,5 +42,41 @@ export const employeeData: Employee[] = [
     name: 'Win Pa Pa',
     position: 'Team Lead (Project Management)',
     image: '/images/team/employees/win_pa_pa.png',
+  },
+  {
+    id: 'nang-ohnmar-nwe-oo',
+    name: 'Nang Ohnmar Nwe Oo',
+    position: 'Team Lead (Cloud)',
+    image: '/images/team/employees/nang_ohnmar_nwe_oo.jpg',
+  },
+  {
+    id: 'aye-myat-nandar',
+    name: 'Aye Myat Nandar',
+    position: '',
+    image: '/images/team/employees/aye_myat_nandar.jpg',
+  },
+  {
+    id: 'hsaung-yamin-than',
+    name: 'Hsaung Yamin Than',
+    position: '',
+    image: '/images/team/employees/hsaung_yamin_than.jpg',
+  },
+  {
+    id: 'paing-hein-kyaw',
+    name: 'Paing Hein Kyaw',
+    position: '',
+    image: '/images/team/employees/paing_hein_kyaw.jpg',
+  },
+  {
+    id: 'thant-zin',
+    name: 'Thant Zin',
+    position: '',
+    image: '/images/team/employees/thant_zin.jpg',
+  },
+  {
+    id: 'yu-war-aung',
+    name: 'Yu War Aung',
+    position: '',
+    image: '/images/team/employees/yu_war_aung.jpg',
   },
 ];
