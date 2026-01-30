@@ -1,20 +1,22 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { Turnstile } from '@marsidev/react-turnstile';
+import type { TurnstileInstance } from '@marsidev/react-turnstile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { CONTACT_INFO } from '@/lib/constants';
 import { PageHeader } from '@/components/common/PageHeader';
 
+const TURNSTILE_SITE_KEY = '0x4AAAAAAACVvc34yZ1-zEUfq';
+
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
-  subject: z.string().min(3, 'Subject must be at least 3 characters'),
-  phone: z.string().optional(),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
@@ -23,7 +25,9 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [isHuman, setIsHuman] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   const {
     register,
@@ -35,26 +39,39 @@ export const ContactUs = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    if (!isHuman) {
-      alert('Please verify that you are human');
-      return;
-    }
+    if (!turnstileToken) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Placeholder for form submission - will be implemented later
-    console.log('Form submitted:', data);
+    try {
+      const res = await fetch('https://api.nex4.net/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          'cf-turnstile-response': turnstileToken,
+        }),
+      });
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+      if (!res.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
 
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    reset();
-    setIsHuman(false);
-
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitSuccess(false), 3000);
+      setSubmitSuccess(true);
+      reset();
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
+      setTimeout(() => setSubmitSuccess(false), 3000);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : 'Something went wrong. Please try again.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -197,35 +214,6 @@ export const ContactUs = () => {
                     </div>
                   </div>
 
-                  {/* Subject and Phone Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Subject
-                      </label>
-                      <Input
-                        id="subject"
-                        {...register('subject')}
-                        placeholder="Enter subject"
-                        className={errors.subject ? 'border-red-500' : ''}
-                      />
-                      {errors.subject && (
-                        <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-                      )}
-                    </div>
-
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        id="phone"
-                        {...register('phone')}
-                        placeholder="Enter your phone"
-                      />
-                    </div>
-                  </div>
-
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -243,25 +231,19 @@ export const ContactUs = () => {
                     )}
                   </div>
 
-                  {/* I am human checkbox */}
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      id="human"
-                      checked={isHuman}
-                      onChange={(e) => setIsHuman(e.target.checked)}
-                      className="w-4 h-4 text-[#00A9E0] border-gray-300 rounded focus:ring-[#00A9E0]"
-                    />
-                    <label htmlFor="human" className="text-sm text-gray-600">
-                      I am human
-                    </label>
-                  </div>
+                  {/* Turnstile CAPTCHA */}
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={TURNSTILE_SITE_KEY}
+                    onSuccess={setTurnstileToken}
+                    onExpire={() => setTurnstileToken(null)}
+                  />
 
                   {/* Submit Button */}
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !turnstileToken}
                     className="w-full bg-gradient-to-r from-[#00A9E0] to-[#00C4FF] hover:brightness-110 text-white transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {isSubmitting ? (
@@ -289,6 +271,16 @@ export const ContactUs = () => {
                       className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center"
                     >
                       Thank you! Your message has been sent successfully.
+                    </motion.div>
+                  )}
+
+                  {submitError && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-center"
+                    >
+                      {submitError}
                     </motion.div>
                   )}
                 </form>
