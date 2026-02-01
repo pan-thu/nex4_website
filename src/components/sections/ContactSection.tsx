@@ -1,17 +1,14 @@
-import { useRef, useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Turnstile } from '@marsidev/react-turnstile';
-import type { TurnstileInstance } from '@marsidev/react-turnstile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { CONTACT_INFO } from '@/lib/constants';
-
-const TURNSTILE_SITE_KEY = '0x4AAAAAAACVvc34yZ1-zEUfq';
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -26,7 +23,7 @@ export const ContactSection = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  const turnstileRef = useRef<TurnstileInstance | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const {
     register,
@@ -217,8 +214,9 @@ export const ContactSection = () => {
 
               <Turnstile
                 ref={turnstileRef}
-                siteKey={TURNSTILE_SITE_KEY}
-                onSuccess={setTurnstileToken}
+                siteKey="0x4AAAAAAACVvc34yZ1-zEUfq"
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => setTurnstileToken(null)}
                 onExpire={() => setTurnstileToken(null)}
               />
 
