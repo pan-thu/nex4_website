@@ -224,7 +224,7 @@ export const ContactSection = () => {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting || !turnstileToken}
-                className="w-full bg-primary hover:bg-primary-dark text-white transition-all duration-300 hover:scale-105"
+                className="w-full bg-gradient-to-r from-[#00A9E0] to-[#00C4FF] hover:brightness-110 text-white transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 {isSubmitting ? (
                   <span className="flex items-center gap-2">
