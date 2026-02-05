@@ -215,6 +215,7 @@ export const ContactSection = () => {
               <Turnstile
                 ref={turnstileRef}
                 siteKey="0x4AAAAAACVvc34yZ1-zEUfq"
+                options={{ appearance: 'always' }}
                 onSuccess={(token) => setTurnstileToken(token)}
                 onError={() => setTurnstileToken(null)}
                 onExpire={() => setTurnstileToken(null)}
