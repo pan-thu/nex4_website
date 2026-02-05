@@ -49,7 +49,7 @@ export const ContactUs = () => {
           name: data.name,
           email: data.email,
           message: data.message,
-          'cf-turnstile-response': turnstileToken,
+          turnstileToken,
         }),
       });
 
