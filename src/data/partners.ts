@@ -55,7 +55,6 @@ export const partnerLogos: Partner[] = [
 
   // Huawei
   { id: 'huawei-gold', name: 'Huawei Gold Partner', logo: '/images/partners/huawei_gold.jpg' },
-  { id: 'huawei-authorised', name: 'Huawei Authorised Partner', logo: '/images/partners/huawei_authorised.jpg' },
 
   // Palo Alto Networks
   { id: 'palo-alto', name: 'Palo Alto Networks', logo: '/images/partners/palo_alto.png' },
