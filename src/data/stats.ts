@@ -3,7 +3,7 @@ import type { Stat } from '@/types';
 export const statsData: Stat[] = [
   {
     id: 'projects',
-    value: '110+',
+    value: '500+',
     label: 'Project Done',
     icon: 'Briefcase',
   },

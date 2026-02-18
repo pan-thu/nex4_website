@@ -31,6 +31,7 @@ export const securityOperationData: ServiceCategoryPageData = {
   partners: {
     sectionTitle: 'Our Security Partners',
     logos: [
+      { name: 'Cisco', logo: '/images/partners/cisco_security.png' },
       { name: 'Palo Alto Networks', logo: '/images/partners/No.7-e1580118303711.png' },
       { name: 'Check Point', logo: '/images/partners/check_point-e1580119509168.png' },
       { name: 'Fortinet', logo: '/images/partners/fortinet-e1580122030279.png' },

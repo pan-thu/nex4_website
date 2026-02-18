@@ -93,7 +93,7 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const TEAM_STATS = {
-  experience: '18+',
+  experience: '12+',
   satisfaction: '98%',
   availability: '24/7',
 };

@@ -14,12 +14,6 @@ export const employeeData: Employee[] = [
     image: '/images/team/employees/aung_pyae_phyo_thu.png',
   },
   {
-    id: 'tin-swe',
-    name: 'Tin Swe',
-    position: 'Network Manager',
-    image: '/images/team/employees/tin_swe.png',
-  },
-  {
     id: 'soe-nanda',
     name: 'Soe Nanda',
     position: 'Customer Success Manager',
@@ -36,12 +30,6 @@ export const employeeData: Employee[] = [
     name: 'Lwin Kyaw Moe',
     position: 'Team Lead (Support)',
     image: '/images/team/employees/lwin_kyaw_moe.png',
-  },
-  {
-    id: 'win-pa-pa',
-    name: 'Win Pa Pa',
-    position: 'Team Lead (Project Management)',
-    image: '/images/team/employees/win_pa_pa.png',
   },
   {
     id: 'nang-ohnmar-nwe-oo',
