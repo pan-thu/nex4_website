@@ -45,7 +45,7 @@ export const AboutUs = () => {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-gray-800">11+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-gray-800">12+</div>
                   <div className="text-sm text-gray-600 mt-1">Years Experience</div>
                 </div>
                 <div className="text-center">

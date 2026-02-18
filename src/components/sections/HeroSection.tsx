@@ -190,7 +190,7 @@ export const HeroSection = () => {
             </div>
             <div className="w-px h-8 bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-white">10+</span>
+              <span className="text-2xl font-bold text-white">12+</span>
               <span>Years Experience</span>
             </div>
           </motion.div>
