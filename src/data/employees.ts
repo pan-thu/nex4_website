@@ -8,12 +8,6 @@ export const employeeData: Employee[] = [
     image: '/images/team/employees/kaung_htet_zaw.jpg',
   },
   {
-    id: 'aung-pyae-phyo-thu',
-    name: 'Aung Pyae Phyo Thu',
-    position: 'Director (Solution Consulting)',
-    image: '/images/team/employees/aung_pyae_phyo_thu.png',
-  },
-  {
     id: 'soe-nanda',
     name: 'Soe Nanda',
     position: 'Customer Success Manager',

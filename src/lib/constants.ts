@@ -86,8 +86,7 @@ export const NAV_LINKS: NavLink[] = [
     href: '#',
     simpleDropdown: [
       { label: 'NEXSA', href: 'https://nexsa.nex4.net/', external: true },
-      { label: '.Japan', href: 'https://www.nex4.jp/', external: true },
-      { label: '.Microsoft', href: 'https://microsoft.nex4.net/', external: true },
+      { label: 'Japan', href: 'https://www.nex4.jp/', external: true },
     ],
   },
 ];
