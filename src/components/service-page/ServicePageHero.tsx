@@ -8,7 +8,7 @@ interface Props {
 export const ServicePageHero = ({ hero }: Props) => {
   return (
     <>
-      {/* Page Header - "News" */}
+      {/* Page Header */}
       <section className="relative bg-[#1e3a4f] pt-32 pb-16 overflow-hidden">
         {/* Decorative circles */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#2C5F7F] rounded-full opacity-30 translate-x-1/2 -translate-y-1/2"></div>
@@ -22,7 +22,7 @@ export const ServicePageHero = ({ hero }: Props) => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4">
-              News
+              {hero.title}
             </h1>
             <div className="w-24 h-1 bg-[#00C4FF] mx-auto"></div>
           </motion.div>

@@ -36,8 +36,12 @@ export const awsWellArchitectProgramData: ServicePageData = {
     ],
   },
   partners: {
-    sectionTitle: 'AWS Advanced Tier Partner',
-    logos: [],
+    sectionTitle: 'AWS Partner',
+    logos: [
+      { name: 'AWS Advanced', logo: '/images/partners/aws_advanced.png' },
+      { name: 'AWS Advanced Gold', logo: '/images/partners/aws_advanced_gold.png' },
+      { name: 'AWS Well-Architected', logo: '/images/partners/aws_wapp.png' },
+    ],
   },
   missions: [
     {

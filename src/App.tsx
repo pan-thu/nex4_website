@@ -3,6 +3,7 @@ import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { ScrollProgress } from '@/components/common/ScrollProgress';
 import { BackToTop } from '@/components/common/BackToTop';
+import { ScrollToTop } from '@/components/common/ScrollToTop';
 import {
   Home,
   AboutUs,
@@ -37,6 +38,7 @@ import {
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <ScrollProgress />
       <Navbar />
       <main className="flex-grow">

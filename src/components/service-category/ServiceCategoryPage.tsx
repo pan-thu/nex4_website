@@ -47,7 +47,7 @@ const defaultGradient = 'from-[#00A9E0] to-[#00C4FF]';
 export const ServiceCategoryPage = ({ data }: ServiceCategoryPageProps) => {
   return (
     <>
-      <PageHeader title="News" />
+      <PageHeader title={data.title} />
 
       {/* Intro Section */}
       <section className="relative py-20 bg-gradient-to-b from-white via-gray-50/50 to-white overflow-hidden">

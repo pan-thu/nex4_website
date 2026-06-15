@@ -105,7 +105,7 @@ export const Navbar = () => {
                       </a>
                     ) : (
                       <button
-                        onClick={() => !hasDropdown && window.location.assign(link.href)}
+                        onClick={() => link.href !== '#' && navigate(link.href)}
                         className={`text-base leading-none hover:text-primary font-semibold transition-colors flex items-center gap-1 ${
                           isScrolled ? 'text-gray-900' : 'text-white'
                         }`}

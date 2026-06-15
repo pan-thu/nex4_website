@@ -1,14 +1,30 @@
+import { useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TeamMemberCard } from '@/components/common/TeamMemberCard';
 import { useCarousel } from '@/hooks/useCarousel';
 import { leadershipData } from '@/data/leadership';
 
 export const ManagementTeamSection = () => {
-  const { currentIndex, goToIndex, setIsPaused } = useCarousel({
+  const { currentIndex, goToIndex, goToNext, goToPrev, setIsPaused } = useCarousel({
     totalItems: leadershipData.length,
     autoPlay: true,
     autoPlayInterval: 5000,
   });
+
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const handleWheel = useCallback((e: WheelEvent) => {
+    e.preventDefault();
+    if (e.deltaX > 0 || e.deltaY > 0) goToNext();
+    else goToPrev();
+  }, [goToNext, goToPrev]);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
+  }, [handleWheel]);
 
   const itemsPerView = 3;
   const visibleMembers = leadershipData.slice(
@@ -91,7 +107,7 @@ export const ManagementTeamSection = () => {
               className="flex gap-8 mt-8"
             >
               {[
-                { value: '50+', label: 'Years Combined' },
+                { value: '12+', label: 'Years Experience' },
                 { value: '200+', label: 'Projects Led' },
               ].map((stat, index) => (
                 <motion.div
@@ -122,6 +138,7 @@ export const ManagementTeamSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#00A9E0]/10 to-[#00C4FF]/10 rounded-[2rem] blur-2xl" />
 
             <div
+              ref={carouselRef}
               className="relative bg-white rounded-3xl py-6 px-4 shadow-xl border border-gray-100"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}

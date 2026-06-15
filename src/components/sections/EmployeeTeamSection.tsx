@@ -1,14 +1,30 @@
+import { useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TeamMemberCard } from '@/components/common/TeamMemberCard';
 import { useCarousel } from '@/hooks/useCarousel';
 import { employeeData } from '@/data/employees';
 
 export const EmployeeTeamSection = () => {
-  const { currentIndex, goToIndex, setIsPaused } = useCarousel({
+  const { currentIndex, goToIndex, goToNext, goToPrev, setIsPaused } = useCarousel({
     totalItems: Math.ceil(employeeData.length / 2),
     autoPlay: true,
     autoPlayInterval: 5000,
   });
+
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const handleWheel = useCallback((e: WheelEvent) => {
+    e.preventDefault();
+    if (e.deltaX > 0 || e.deltaY > 0) goToNext();
+    else goToPrev();
+  }, [goToNext, goToPrev]);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
+  }, [handleWheel]);
 
   const itemsPerPage = 2;
   const startIndex = currentIndex * itemsPerPage;
@@ -64,12 +80,12 @@ export const EmployeeTeamSection = () => {
               className="flex items-center gap-3 mb-4"
             >
               <div className="h-[2px] w-12 bg-[#00C4FF]"></div>
-              <p className="text-xs uppercase tracking-widest text-[#00C4FF] font-semibold">The Team</p>
+              <p className="text-xs uppercase tracking-widest text-[#00C4FF] font-semibold">Team Leads</p>
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
               Our{' '}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-[#00C4FF] to-[#00A9E0] bg-clip-text text-transparent">Awesome</span>
+                <span className="bg-gradient-to-r from-[#00C4FF] to-[#00A9E0] bg-clip-text text-transparent">Team</span>
                 <motion.span
                   className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-[#00C4FF] to-[#00A9E0] rounded-full"
                   initial={{ scaleX: 0 }}
@@ -79,7 +95,7 @@ export const EmployeeTeamSection = () => {
                   style={{ originX: 0 }}
                 />
               </span>
-              <br />Team
+              <br />Leads
             </h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -136,6 +152,7 @@ export const EmployeeTeamSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#00C4FF]/20 to-[#00A9E0]/20 rounded-[2rem] blur-2xl" />
 
             <div
+              ref={carouselRef}
               className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}

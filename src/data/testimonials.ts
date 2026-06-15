@@ -58,7 +58,7 @@ export const testimonialData: Testimonial[] = [
   {
     id: 'ko-minn-wint-oo',
     name: 'Ko Minn Wint Oo',
-    company: 'AYA Bank',
+    company: 'Ayeyarwady Bank',
     position: 'Chief Technology Officer',
     testimonial:
       'NEX4 is very powerful in the technical team and project management team and also very flexible to deal with NEX4. We, AYA bank always consider Trust and NEX4 is one of our trusted partners.',

@@ -25,7 +25,7 @@ export const ServicePartnersSection = ({ partners }: Props) => {
         </motion.div>
 
         {/* Infinite scrolling container */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <motion.div
             className="flex gap-8"
             animate={{
@@ -43,7 +43,7 @@ export const ServicePartnersSection = ({ partners }: Props) => {
             {duplicatedLogos.map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-6 hover:shadow-lg transition-shadow duration-300"
+                className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-3 hover:shadow-lg transition-shadow duration-300"
               >
                 <img
                   src={partner.logo}

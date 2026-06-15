@@ -22,9 +22,9 @@ export const TeamMemberCard = ({ member, showSocial = false, variant = 'light' }
         transition={{ duration: 0.3 }}
         className="relative mb-3 flex justify-center"
       >
-        <Avatar className="w-24 h-24 rounded-3xl">
+        <Avatar className="w-24 h-24 rounded-full">
           <AvatarImage src={member.image} alt={member.name} className="object-cover" />
-          <AvatarFallback className="text-xl bg-[#00A9E0] text-white rounded-3xl">
+          <AvatarFallback className="text-xl bg-[#00A9E0] text-white rounded-full">
             {member.name.split(' ').map(n => n[0]).join('')}
           </AvatarFallback>
         </Avatar>

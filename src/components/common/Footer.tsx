@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Linkedin, Youtube, MapPin, Phone, Mail, Clock, Search, Shield, Building2, Cloud, Globe, Headphones } from 'lucide-react';
-import { Input } from '@/components/ui/input';
+import { Facebook, Linkedin, Youtube, MapPin, Phone, Mail, Clock, Shield, Building2, Cloud, Globe, Headphones } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 import { CONTACT_INFO, SOCIAL_LINKS } from '@/lib/constants';
 
 export const Footer = () => {
@@ -20,17 +20,9 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <img src="/images/logo-white.png" alt="NEX4 ICT Solutions" className="h-12 mb-4" />
-            <p className="text-gray-300 mb-6 text-sm">
+            <p className="text-gray-300 text-sm">
               Everyday is a new day for us and we work really hard to satisfy our customer everywhere with innovative technology solutions.
             </p>
-            <div className="relative">
-              <Input
-                type="search"
-                placeholder="Search..."
-                className="bg-white border-0 text-gray-800 placeholder:text-gray-400 pr-10 rounded-md"
-              />
-              <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-            </div>
           </motion.div>
 
           {/* Quick Links */}
@@ -178,7 +170,7 @@ export const Footer = () => {
             <div className="flex items-center gap-4">
               {[
                 { icon: Facebook, href: SOCIAL_LINKS.facebook },
-                { icon: Twitter, href: SOCIAL_LINKS.twitter },
+                { icon: FaXTwitter, href: SOCIAL_LINKS.twitter },
                 { icon: Linkedin, href: SOCIAL_LINKS.linkedin },
                 { icon: Youtube, href: SOCIAL_LINKS.youtube },
               ].map((social, index) => (

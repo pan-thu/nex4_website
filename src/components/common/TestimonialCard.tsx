@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
 import type { Testimonial } from '@/types';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,26 +15,6 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#00C4FF]/10 to-transparent" />
 
       <CardContent className="p-10 md:p-16 relative z-10">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5, type: 'spring' }}
-          className="flex justify-center mb-8"
-        >
-          <div className="relative">
-            {/* Animated ring */}
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-[#00A9E0]/30"
-              initial={{ scale: 1, opacity: 0 }}
-              animate={{ scale: 1.5, opacity: 0 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
-            />
-            <div className="relative w-16 h-16 bg-gradient-to-br from-[#00A9E0] to-[#00C4FF] rounded-full flex items-center justify-center shadow-lg shadow-[#00A9E0]/25">
-              <Quote className="text-white" size={28} />
-            </div>
-          </div>
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

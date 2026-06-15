@@ -195,28 +195,6 @@ export const SolutionsGrid = ({ solutions }: Props) => {
                       {solution.description}
                     </p>
 
-                    {/* Hover indicator arrow */}
-                    <motion.div
-                      className="mt-5 flex items-center text-[#00A9E0] font-semibold text-sm"
-                      variants={{
-                        rest: { opacity: 0, x: -10 },
-                        hover: { opacity: 1, x: 0 },
-                      }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <span>Learn more</span>
-                      <motion.span
-                        className="ml-2"
-                        variants={{
-                          rest: { x: 0 },
-                          hover: { x: 5 },
-                        }}
-                        transition={{ duration: 0.3, repeat: Infinity, repeatType: 'reverse' }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.div>
-
                     {/* Background decoration on hover */}
                     <motion.div
                       className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-[#00A9E0]/10 to-[#00C4FF]/10 rounded-full"

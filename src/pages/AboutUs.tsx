@@ -53,7 +53,7 @@ export const AboutUs = () => {
                   <div className="text-sm text-gray-600 mt-1">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-gray-800">100+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-gray-800">40+</div>
                   <div className="text-sm text-gray-600 mt-1">Happy Clients</div>
                 </div>
               </div>
