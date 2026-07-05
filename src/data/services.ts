@@ -2,63 +2,91 @@ import type { Service } from '@/types';
 
 export const servicesData: Service[] = [
   {
-    id: 'security-operation',
-    title: 'Security & Operation',
-    description:
-      'Advanced security solutions and operational excellence to protect your digital assets with 24/7 monitoring.',
-    icon: 'Shield',
-    color: 'red',
-    features: [
-      'Network Security',
-      'Endpoint Protection',
-      'Security Operations Center',
-      'Incident Response',
-    ],
-    link: '/security-operation',
-  },
-  {
     id: 'network-infrastructure',
     title: 'Network Infrastructure',
     description:
-      'Robust network infrastructure solutions designed to ensure reliable connectivity and seamless operations.',
+      'Design, deploy and manage enterprise-grade networks — from campus LAN to SD-WAN.',
     icon: 'Network',
     color: 'green',
     features: [
-      'Network Design',
-      'Implementation',
-      'Management',
-      'Optimization',
+      'Enterprise LAN/WAN',
+      'Wireless Networking',
+      'SD-WAN',
+      'DC Network/SDN',
     ],
     link: '/network-infrastructure',
   },
   {
-    id: 'system-cloud',
-    title: 'System & Cloud',
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
     description:
-      'Comprehensive system integration and cloud services for modern enterprises seeking digital transformation.',
+      'Protect users, data and infrastructure against evolving threats with layered security controls.',
+    icon: 'Shield',
+    color: 'red',
+    features: [
+      'Next-Gen Firewall (NGFW)',
+      'Web Application Firewall (WAF)',
+      'Zero Trust & Identity',
+      'SOC & DDoS Protection',
+    ],
+    link: '/cybersecurity',
+  },
+  {
+    id: 'data-center-modernization',
+    title: 'Data Center Modernization',
+    description:
+      'Modernize your data center with secure, scalable, and resilient infrastructure — from core to edge.',
+    icon: 'Server',
+    color: 'blue',
+    features: [
+      'Compute',
+      'Storage',
+      'Private Cloud & Modern Workloads',
+      'Backup & Disaster Recovery',
+    ],
+    link: '/data-center-modernization',
+  },
+  {
+    id: 'cloud-hybrid-solutions',
+    title: 'Cloud & Hybrid Solutions',
+    description:
+      'Migrate, optimise and govern workloads across AWS, Azure, Huawei Cloud and Alibaba Cloud.',
     icon: 'Cloud',
     color: 'blue',
     features: [
-      'Cloud Migration',
-      'Hybrid Cloud Solutions',
-      'System Integration',
-      'Infrastructure as Code',
+      'Cloud Strategy & Migration',
+      'Hybrid Cloud Architecture',
+      'Private Cloud',
+      'Data & AI Services',
     ],
-    link: '/system-cloud',
+    link: '/cloud-hybrid-solutions',
   },
   {
-    id: 'modern-workspace',
-    title: 'Modern Workspace',
+    id: 'modern-workplace',
+    title: 'Modern Workplace',
     description:
-      'Innovative workspace solutions that empower teams to collaborate efficiently in today\'s hybrid work environment.',
+      'Empower employees with Microsoft 365, Power Platform and unified communications.',
     icon: 'Monitor',
     color: 'purple',
     features: [
-      'Collaboration Tools',
-      'Remote Work Solutions',
-      'Device Management',
-      'User Experience',
+      'Microsoft 365 & Mail Migration',
+      'Power Platform Development',
+      'Microsoft Security',
     ],
-    link: '/modern-workspace',
+    link: '/modern-workplace',
+  },
+  {
+    id: 'managed-services-support',
+    title: 'Managed Services & Support',
+    description:
+      'Ongoing 24/7 operational support to keep your infrastructure running, secure and compliant.',
+    icon: 'Headset',
+    color: 'purple',
+    features: [
+      '24/7 NOC',
+      'Managed Service Operations',
+      'Annual Premium Support',
+    ],
+    link: '/managed-services-support',
   },
 ];

@@ -6,8 +6,13 @@ interface Props {
 }
 
 export const ServicePartnersSection = ({ partners }: Props) => {
-  // Duplicate logos for infinite scroll effect
-  const duplicatedLogos = [...partners.logos, ...partners.logos];
+  if (partners.logos.length === 0) {
+    return null;
+  }
+
+  // Below this count, a static row reads better than a looping marquee
+  const isStatic = partners.logos.length <= 4;
+  const duplicatedLogos = isStatic ? partners.logos : [...partners.logos, ...partners.logos];
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
@@ -24,36 +29,53 @@ export const ServicePartnersSection = ({ partners }: Props) => {
           </h2>
         </motion.div>
 
-        {/* Infinite scrolling container */}
-        <div className="relative overflow-hidden">
-          <motion.div
-            className="flex gap-8"
-            animate={{
-              x: [0, -(192 + 32) * partners.logos.length],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
-          >
-            {duplicatedLogos.map((partner, index) => (
+        {isStatic ? (
+          <div className="flex flex-wrap justify-center gap-8">
+            {partners.logos.map((partner) => (
               <div
-                key={`${partner.name}-${index}`}
+                key={partner.name}
                 className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-3 hover:shadow-lg transition-shadow duration-300"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             ))}
-          </motion.div>
-        </div>
+          </div>
+        ) : (
+          /* Infinite scrolling container */
+          <div className="relative overflow-hidden">
+            <motion.div
+              className="flex gap-8"
+              animate={{
+                x: [0, -(192 + 32) * partners.logos.length],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 30,
+                  ease: "linear",
+                },
+              }}
+            >
+              {duplicatedLogos.map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-3 hover:shadow-lg transition-shadow duration-300"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        )}
       </div>
     </section>
   );

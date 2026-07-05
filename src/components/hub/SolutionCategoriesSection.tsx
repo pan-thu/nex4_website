@@ -5,6 +5,8 @@ import {
   TbNetwork,
   TbCloud,
   TbDeviceDesktop,
+  TbServer,
+  TbHeadset,
   TbArrowRight,
 } from 'react-icons/tb';
 import type { SolutionCategory } from '@/types';
@@ -15,29 +17,41 @@ interface SolutionCategoriesSectionProps {
 
 // Category icons, colors, and links
 const categoryConfig: Record<string, { icon: React.ElementType; color: string; gradient: string; link: string }> = {
-  'SECURITY & OPERATION': {
-    icon: TbShieldLock,
-    color: '#ef4444',
-    gradient: 'from-red-500 to-orange-500',
-    link: '/security-operation',
-  },
-  'NETWORK INFRASTRUCTURE': {
+  'Network Infrastructure': {
     icon: TbNetwork,
     color: '#3b82f6',
     gradient: 'from-blue-500 to-cyan-500',
     link: '/network-infrastructure',
   },
-  'SYSTEM & CLOUD': {
+  'Cybersecurity': {
+    icon: TbShieldLock,
+    color: '#ef4444',
+    gradient: 'from-red-500 to-orange-500',
+    link: '/cybersecurity',
+  },
+  'Data Center Modernization': {
+    icon: TbServer,
+    color: '#f59e0b',
+    gradient: 'from-amber-500 to-orange-500',
+    link: '/data-center-modernization',
+  },
+  'Cloud & Hybrid Solutions': {
     icon: TbCloud,
     color: '#8b5cf6',
     gradient: 'from-purple-500 to-pink-500',
-    link: '/system-cloud',
+    link: '/cloud-hybrid-solutions',
   },
-  'MODERN WORKSPACE': {
+  'Modern Workplace': {
     icon: TbDeviceDesktop,
     color: '#10b981',
     gradient: 'from-green-500 to-teal-500',
-    link: '/modern-workspace',
+    link: '/modern-workplace',
+  },
+  'Managed Services & Support': {
+    icon: TbHeadset,
+    color: '#0ea5e9',
+    gradient: 'from-sky-500 to-blue-500',
+    link: '/managed-services-support',
   },
 };
 
@@ -63,7 +77,7 @@ export const SolutionCategoriesSection = ({ categories }: SolutionCategoriesSect
         </motion.div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {categories.map((category, index) => {
             const config = categoryConfig[category.category] || {
               icon: TbShieldLock,

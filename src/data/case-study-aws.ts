@@ -31,7 +31,7 @@ export const awsCaseStudyData: CaseStudyPageData = {
     subcategory: 'Case Studies',
     format: 'Case Study',
     downloadable: true,
-    relatedPages: ['/public-clouds', '/data-protection', '/private-cloud'],
+    relatedPages: ['/cloud-strategy-migration', '/hybrid-cloud-architecture', '/private-cloud'],
     tags: ['AWS', 'Public Cloud', 'Security', 'Case Study', 'Business Critical Applications'],
   },
   postDetails: {

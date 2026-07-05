@@ -7,74 +7,31 @@ export const privateCloudData: ServicePageData = {
   hero: {
     title: 'PRIVATE CLOUD',
     titleHighlight: 'CLOUD',
-    description: 'A model of cloud computing over private IT infrastructure. Dedicated to the needs and goals of a single organization. Best for businesses with dynamic or unpredictable computing needs.',
+    description: 'For organisations requiring cloud agility with on-premise control. NEX4 builds VMware Cloud Foundation, Red Hat OpenShift and Huawei Cloud Stack private clouds — delivering self-service provisioning and automated lifecycle management.',
     ctaText: 'Contact Us',
     ctaLink: '/contact-us',
     image: '/images/services/private-cloud-1024x678-1-e1580120232935.jpg',
   },
-  solutions: {
-    sectionTitle: 'OUR SOLUTIONS',
+  capabilities: {
+    sectionTitle: 'Key Capabilities',
     items: [
-      {
-        icon: 'compute',
-        title: 'Compute',
-        description: 'Grow your business with our powerful compute providing the elasticity and cost savings of the public cloud.',
-        image: '/images/services/Compute-e1580120663905-on4kzo5d2iu4ysy0y8blzi7kpnnpv049chotb23n0c.png',
-      },
-      {
-        icon: 'storage',
-        title: 'Storage',
-        description: 'Customize the cloud environment of the organization to meet specific needs of your business.',
-        image: '/images/services/Storage-e1580120652859-on4kzo5d2iu4ysy0y8blzi7kpnnpv049chotb23n0c.png',
-      },
-      {
-        icon: 'automation',
-        title: 'Automation',
-        description: 'Make it easy and efficient for IT and developers to get what they need to build and deploy applications.',
-        image: '/images/services/Automation-e1580120644397-on4kzo5d2iu4ysy0y8blzi7kpnnpv049chotb23n0c.png',
-      },
-      {
-        icon: 'billing',
-        title: 'Billing',
-        description: 'Simplify and streamline invoicing and billing across your private cloud.',
-        image: '/images/services/Billing-e1580120636664-on4kzo5d2iu4ysy0y8blzi7kpnnpv049chotb23n0c.png',
-      },
-      {
-        icon: 'devops',
-        title: 'Development & Operations',
-        description: 'Run your cloud-based system without the need to take part or all of an application out of service.',
-        image: '/images/services/Development-_-Operations-e1580120628817-on4kzo5d2iu4ysy0y8blzi7kpnnpv049chotb23n0c.png',
-      },
+      'VMware Cloud Foundation (VCF) deployment',
+      'Red Hat OpenShift private cloud',
+      'Huawei Cloud Stack on-premise',
+      'Self-service provisioning portal',
+      'Private cloud capacity management',
+      'On-prem to private cloud migration',
     ],
   },
   partners: {
     sectionTitle: 'Our Cloud Partners',
     logos: [
-      { name: 'VMware', logo: '/images/partners/vmware.jpg' },
-      { name: 'Nutanix', logo: '/images/partners/nutanix.png' },
-      { name: 'Dell EMC', logo: '/images/partners/dell.png' },
-      { name: 'Oracle', logo: '/images/partners/oracle.png' },
-      { name: 'Microsoft', logo: '/images/partners/microsoft.png' },
+      { name: 'VMware by Broadcom', logo: '/images/partners/vmware-broadcom.png' },
+      { name: 'Red Hat', logo: '/images/partners/red-hat.png' },
+      { name: 'Huawei', logo: '/images/partners/huawei-plain.png' },
     ],
   },
-  missions: [
-    {
-      number: '01',
-      title: 'SECURITY',
-    },
-    {
-      number: '02',
-      title: 'SPEED',
-    },
-    {
-      number: '03',
-      title: 'RELIABILITY',
-    },
-    {
-      number: '04',
-      title: 'SATISFACTION',
-    },
-  ],
+  missions: [],
   contactSection: {
     title: 'Get In Touch With Our Awesome Team',
     showContactForm: true,

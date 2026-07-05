@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom';
 import {
   TbShieldLock,
   TbArrowRight,
-  TbBuildingSkyscraper,
-  TbServer,
-  TbLock,
   TbNetwork,
   TbWifi,
-  TbCloud,
-  TbCloudComputing,
+  TbRouter,
+  TbTopologyRing,
+  TbWorldWww,
+  TbShieldCheck,
+  TbFingerprint,
+  TbReportAnalytics,
+  TbShield,
+  TbCpu,
   TbDatabase,
+  TbCloudComputing,
+  TbRefresh,
+  TbCloudUp,
   TbBrandOffice,
-  TbVideo,
+  TbHeadset,
   TbApps,
 } from 'react-icons/tb';
 import { PageHeader } from '@/components/common/PageHeader';
@@ -26,18 +32,41 @@ interface ServiceCategoryPageProps {
 
 // Solution icons
 const solutionIconMap: Record<string, React.ElementType> = {
-  'enterprise-security': TbBuildingSkyscraper,
-  'dc-security': TbServer,
-  'itops-security': TbLock,
-  'enterprise-network': TbNetwork,
-  'dc-network': TbServer,
-  'network-services': TbWifi,
-  'private-cloud': TbCloud,
-  'public-cloud': TbCloudComputing,
-  'data-protection': TbDatabase,
-  'microsoft-365': TbBrandOffice,
-  'unified-communication': TbVideo,
-  'business-apps': TbApps,
+  // Network Infrastructure
+  'enterprise-lan-wan': TbNetwork,
+  'wireless-networking': TbWifi,
+  'sd-wan': TbRouter,
+  'dc-network-sdn': TbTopologyRing,
+  'network-services-ddi-nac': TbWorldWww,
+
+  // Cybersecurity
+  'ngfw': TbShieldLock,
+  'waf': TbShieldCheck,
+  'zero-trust-identity': TbFingerprint,
+  'security-operations-soc': TbReportAnalytics,
+  'ddos-protection': TbShield,
+
+  // Data Center Modernization
+  'compute': TbCpu,
+  'storage': TbDatabase,
+  'private-cloud-modern-workloads': TbCloudComputing,
+  'backup-disaster-recovery': TbRefresh,
+
+  // Cloud & Hybrid Solutions
+  'cloud-strategy-migration': TbCloudUp,
+  'hybrid-cloud-architecture': TbTopologyRing,
+  'private-cloud': TbCloudComputing,
+  'data-ai-services': TbReportAnalytics,
+
+  // Modern Workplace
+  'microsoft-365-mail-migration': TbBrandOffice,
+  'power-platform-development': TbApps,
+  'microsoft-security': TbShieldCheck,
+
+  // Managed Services & Support
+  'noc-247': TbReportAnalytics,
+  'managed-service-operations': TbHeadset,
+  'annual-premium-support': TbShieldCheck,
 };
 
 // Default brand colors

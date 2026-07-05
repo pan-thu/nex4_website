@@ -3,23 +3,47 @@ export { AboutUs } from './AboutUs';
 export { ContactUs } from './ContactUs';
 export { PrivacyPolicy } from './PrivacyPolicy';
 
-// Service pages
-export { EnterpriseSecurity } from './services/EnterpriseSecurity';
-export { ITOpsSecurity } from './services/ITOpsSecurity';
-export { BusinessApplications } from './services/BusinessApplications';
-export { O365M365 } from './services/O365M365';
-
-// Cloud services
-export { PublicClouds } from './services/PublicClouds';
-export { PrivateCloud } from './services/PrivateCloud';
-export { AwsWellArchitectProgram } from './services/AwsWellArchitectProgram';
-
-// Network infrastructure
+// Network Infrastructure
+export { NetworkInfrastructure } from './services/NetworkInfrastructure';
 export { EnterpriseNetwork } from './services/EnterpriseNetwork';
-export { NetworkServices } from './services/NetworkServices';
+export { WirelessNetworking } from './services/WirelessNetworking';
+export { SdWan } from './services/SdWan';
 export { DcNetwork } from './services/DcNetwork';
-export { DcCoreSecurity } from './services/DcCoreSecurity';
-export { UnifiedComVideoConf } from './services/UnifiedComVideoConf';
+export { NetworkServices } from './services/NetworkServices';
+
+// Cybersecurity
+export { Cybersecurity } from './services/Cybersecurity';
+export { Ngfw } from './services/Ngfw';
+export { Waf } from './services/Waf';
+export { ZeroTrustIdentity } from './services/ZeroTrustIdentity';
+export { SecurityOperationsSoc } from './services/SecurityOperationsSoc';
+export { DdosProtection } from './services/DdosProtection';
+
+// Data Center Modernization
+export { DataCenterModernization } from './services/DataCenterModernization';
+export { Compute } from './services/Compute';
+export { Storage } from './services/Storage';
+export { PrivateCloudModernWorkloads } from './services/PrivateCloudModernWorkloads';
+export { BackupDisasterRecovery } from './services/BackupDisasterRecovery';
+
+// Cloud & Hybrid Solutions
+export { CloudHybridSolutions } from './services/CloudHybridSolutions';
+export { CloudStrategyMigration } from './services/CloudStrategyMigration';
+export { HybridCloudArchitecture } from './services/HybridCloudArchitecture';
+export { PrivateCloud } from './services/PrivateCloud';
+export { DataAiServices } from './services/DataAiServices';
+
+// Modern Workplace
+export { ModernWorkplace } from './services/ModernWorkplace';
+export { Microsoft365MailMigration } from './services/Microsoft365MailMigration';
+export { PowerPlatformDevelopment } from './services/PowerPlatformDevelopment';
+export { MicrosoftSecurity } from './services/MicrosoftSecurity';
+
+// Managed Services & Support
+export { ManagedServicesSupport } from './services/ManagedServicesSupport';
+export { Noc247 } from './services/Noc247';
+export { ManagedServiceOperations } from './services/ManagedServiceOperations';
+export { AnnualPremiumSupport } from './services/AnnualPremiumSupport';
 
 // Career pages
 export { HireTalent } from './careers/HireTalent';
@@ -28,13 +52,6 @@ export { ITHelpdesk } from './careers/ITHelpdesk';
 export { SecurityEngineer } from './careers/SecurityEngineer';
 export { CloudEngineer } from './careers/CloudEngineer';
 
-// Service category pages
-export { SecurityOperation } from './services/SecurityOperation';
-export { NetworkInfrastructure } from './services/NetworkInfrastructure';
-export { SystemCloud } from './services/SystemCloud';
-export { ModernWorkspace } from './services/ModernWorkspace';
-
 // Misc pages
-export { DataProtection } from './DataProtection';
 export { CaseStudyAWS } from './CaseStudyAWS';
 export { SolutionsServices } from './SolutionsServices';

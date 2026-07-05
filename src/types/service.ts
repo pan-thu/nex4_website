@@ -7,16 +7,9 @@ export interface ServicePageHero {
   image: string;
 }
 
-export interface SolutionItem {
-  icon: string;
-  title: string;
-  description: string;
-  image?: string;
-}
-
-export interface Solutions {
+export interface CapabilityList {
   sectionTitle: string;
-  items: SolutionItem[];
+  items: string[];
 }
 
 export interface PartnerLogo {
@@ -44,7 +37,7 @@ export interface ServicePageData {
   slug: string;
   breadcrumb: string;
   hero: ServicePageHero;
-  solutions: Solutions;
+  capabilities: CapabilityList;
   partners: Partners;
   missions: Mission[];
   contactSection: ContactSection;

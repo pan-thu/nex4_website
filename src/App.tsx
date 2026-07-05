@@ -9,30 +9,43 @@ import {
   AboutUs,
   ContactUs,
   PrivacyPolicy,
-  EnterpriseSecurity,
-  ITOpsSecurity,
-  BusinessApplications,
-  O365M365,
-  PublicClouds,
-  PrivateCloud,
-  AwsWellArchitectProgram,
+  NetworkInfrastructure,
   EnterpriseNetwork,
-  NetworkServices,
+  WirelessNetworking,
+  SdWan,
   DcNetwork,
-  DcCoreSecurity,
-  UnifiedComVideoConf,
+  NetworkServices,
+  Cybersecurity,
+  Ngfw,
+  Waf,
+  ZeroTrustIdentity,
+  SecurityOperationsSoc,
+  DdosProtection,
+  DataCenterModernization,
+  Compute,
+  Storage,
+  PrivateCloudModernWorkloads,
+  BackupDisasterRecovery,
+  CloudHybridSolutions,
+  CloudStrategyMigration,
+  HybridCloudArchitecture,
+  PrivateCloud,
+  DataAiServices,
+  ModernWorkplace,
+  Microsoft365MailMigration,
+  PowerPlatformDevelopment,
+  MicrosoftSecurity,
+  ManagedServicesSupport,
+  Noc247,
+  ManagedServiceOperations,
+  AnnualPremiumSupport,
   HireTalent,
   ProjectManager,
   ITHelpdesk,
   SecurityEngineer,
   CloudEngineer,
-  DataProtection,
   CaseStudyAWS,
   SolutionsServices,
-  SecurityOperation,
-  NetworkInfrastructure,
-  SystemCloud,
-  ModernWorkspace,
 } from '@/pages';
 
 function App() {
@@ -48,23 +61,50 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-          {/* Service pages */}
-          <Route path="/enterprise-security" element={<EnterpriseSecurity />} />
-          <Route path="/itops-security" element={<ITOpsSecurity />} />
-          <Route path="/business-applications" element={<BusinessApplications />} />
-          <Route path="/o365-m365" element={<O365M365 />} />
+          {/* Solutions & Services hub */}
+          <Route path="/solutions-services" element={<SolutionsServices />} />
 
-          {/* Cloud services */}
-          <Route path="/public-clouds" element={<PublicClouds />} />
-          <Route path="/private-cloud" element={<PrivateCloud />} />
-          <Route path="/aws-well-architect-program" element={<AwsWellArchitectProgram />} />
-
-          {/* Network infrastructure */}
+          {/* Network Infrastructure */}
+          <Route path="/network-infrastructure" element={<NetworkInfrastructure />} />
           <Route path="/enterprise-network" element={<EnterpriseNetwork />} />
-          <Route path="/network-services" element={<NetworkServices />} />
+          <Route path="/wireless-networking" element={<WirelessNetworking />} />
+          <Route path="/sd-wan" element={<SdWan />} />
           <Route path="/dc-network" element={<DcNetwork />} />
-          <Route path="/dc-core-security" element={<DcCoreSecurity />} />
-          <Route path="/unified-com-video-conf" element={<UnifiedComVideoConf />} />
+          <Route path="/network-services" element={<NetworkServices />} />
+
+          {/* Cybersecurity */}
+          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/ngfw" element={<Ngfw />} />
+          <Route path="/waf" element={<Waf />} />
+          <Route path="/zero-trust-identity" element={<ZeroTrustIdentity />} />
+          <Route path="/security-operations-soc" element={<SecurityOperationsSoc />} />
+          <Route path="/ddos-protection" element={<DdosProtection />} />
+
+          {/* Data Center Modernization */}
+          <Route path="/data-center-modernization" element={<DataCenterModernization />} />
+          <Route path="/compute" element={<Compute />} />
+          <Route path="/storage" element={<Storage />} />
+          <Route path="/private-cloud-modern-workloads" element={<PrivateCloudModernWorkloads />} />
+          <Route path="/backup-disaster-recovery" element={<BackupDisasterRecovery />} />
+
+          {/* Cloud & Hybrid Solutions */}
+          <Route path="/cloud-hybrid-solutions" element={<CloudHybridSolutions />} />
+          <Route path="/cloud-strategy-migration" element={<CloudStrategyMigration />} />
+          <Route path="/hybrid-cloud-architecture" element={<HybridCloudArchitecture />} />
+          <Route path="/private-cloud" element={<PrivateCloud />} />
+          <Route path="/data-ai-services" element={<DataAiServices />} />
+
+          {/* Modern Workplace */}
+          <Route path="/modern-workplace" element={<ModernWorkplace />} />
+          <Route path="/microsoft-365-mail-migration" element={<Microsoft365MailMigration />} />
+          <Route path="/power-platform-development" element={<PowerPlatformDevelopment />} />
+          <Route path="/microsoft-security" element={<MicrosoftSecurity />} />
+
+          {/* Managed Services & Support */}
+          <Route path="/managed-services-support" element={<ManagedServicesSupport />} />
+          <Route path="/noc-247" element={<Noc247 />} />
+          <Route path="/managed-service-operations" element={<ManagedServiceOperations />} />
+          <Route path="/annual-premium-support" element={<AnnualPremiumSupport />} />
 
           {/* Career pages */}
           <Route path="/careers" element={<HireTalent />} />
@@ -73,15 +113,7 @@ function App() {
           <Route path="/careers/security-engineer-i" element={<SecurityEngineer />} />
           <Route path="/careers/clo" element={<CloudEngineer />} />
 
-          {/* Service category pages */}
-          <Route path="/security-operation" element={<SecurityOperation />} />
-          <Route path="/network-infrastructure" element={<NetworkInfrastructure />} />
-          <Route path="/system-cloud" element={<SystemCloud />} />
-          <Route path="/modern-workspace" element={<ModernWorkspace />} />
-
           {/* Misc pages */}
-          <Route path="/solutions-services" element={<SolutionsServices />} />
-          <Route path="/data-protection" element={<DataProtection />} />
           <Route
             path="/enhanced-business-critical-applications-security-on-public-cloud-case-study"
             element={<CaseStudyAWS />}
