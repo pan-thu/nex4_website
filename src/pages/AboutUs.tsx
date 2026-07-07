@@ -49,12 +49,12 @@ export const AboutUs = () => {
                   <div className="text-sm text-gray-600 mt-1">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-[#00A9E0]">500+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-[#00A9E0]">700+</div>
                   <div className="text-sm text-gray-600 mt-1">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-gray-800">40+</div>
-                  <div className="text-sm text-gray-600 mt-1">Happy Clients</div>
+                  <div className="text-3xl md:text-4xl font-bold text-gray-800">300+</div>
+                  <div className="text-sm text-gray-600 mt-1">Clients</div>
                 </div>
               </div>
             </motion.div>

@@ -108,7 +108,6 @@ export const ManagementTeamSection = () => {
             >
               {[
                 { value: '12+', label: 'Years Experience' },
-                { value: '200+', label: 'Projects Led' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

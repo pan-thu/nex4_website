@@ -28,7 +28,7 @@ export const leadershipData: Leader[] = [
     id: 'thant-zin-soe',
     name: 'Thant Zin Soe',
     position: 'Chief Architect',
-    image: '/images/team/leadership/thant_zin_soe.jpg',
+    image: '/images/team/leadership/thant_zin_soe.png',
     social: {
       linkedin: '#',
       twitter: '#',
@@ -39,7 +39,7 @@ export const leadershipData: Leader[] = [
     id: 'yan-naing-oo',
     name: 'Yan Naing Oo',
     position: 'Chief Technical Officer',
-    image: '/images/team/leadership/yan_naing_oo.jpg',
+    image: '/images/team/leadership/yan_naing_oo.png',
     social: {
       linkedin: '#',
       twitter: '#',

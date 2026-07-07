@@ -8,6 +8,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 interface ServiceCardProps {
   service: Service;
   index: number;
+  className?: string;
 }
 
 const colorStyles = {
@@ -17,7 +18,7 @@ const colorStyles = {
   purple: { backgroundColor: '#00A9E0' },
 };
 
-export const ServiceCard = ({ service, index }: ServiceCardProps) => {
+export const ServiceCard = ({ service, index, className = '' }: ServiceCardProps) => {
   const Icon = Icons[service.icon as keyof typeof Icons] as any;
 
   return (
@@ -26,7 +27,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="h-full min-h-[420px] max-w-[280px] mx-auto"
+      className={`h-full min-h-[420px] max-w-[280px] mx-auto ${className}`}
     >
       <Link to={service.link} className="block h-full">
         <motion.div

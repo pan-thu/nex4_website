@@ -3,31 +3,31 @@ import type { Stat } from '@/types';
 export const statsData: Stat[] = [
   {
     id: 'projects',
-    value: '500+',
-    label: 'Project Done',
+    value: '700+',
+    label: 'Projects Delivered',
     icon: 'Briefcase',
   },
   {
     id: 'clients',
-    value: '40+',
-    label: 'Clients Worldwide',
+    value: '300+',
+    label: 'Clients',
     icon: 'Users',
   },
   {
+    id: 'experience',
+    value: '12+',
+    label: 'Years Experience',
+    icon: 'UserCheck',
+  },
+  {
     id: 'datacenters',
-    value: '30+',
+    value: '20+',
     label: 'Data Centers',
     icon: 'Server',
   },
   {
-    id: 'team',
-    value: '120+',
-    label: 'Team Members',
-    icon: 'UserCheck',
-  },
-  {
     id: 'countries',
-    value: '5',
+    value: '4',
     label: 'Countries',
     icon: 'Globe',
   },

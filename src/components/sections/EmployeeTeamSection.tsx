@@ -116,8 +116,7 @@ export const EmployeeTeamSection = () => {
               className="flex items-center gap-8"
             >
               {[
-                { value: '12+', label: 'Years Experience' },
-                { value: '100%', label: 'Success Rate' },
+                { value: '700+', label: 'Projects Delivered' },
                 { value: '24/7', label: 'Support' },
               ].map((stat, index) => (
                 <motion.div
