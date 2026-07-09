@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Facebook, Linkedin, Youtube, MapPin, Phone, Mail, Clock, Shield, Building2, Cloud, Globe, Headphones } from 'lucide-react';
+import { Facebook, Linkedin, Youtube, MapPin, Phone, Mail, Clock, Shield, Building2, Cloud, Globe, Laptop, Headphones } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
-import { CONTACT_INFO, SOCIAL_LINKS } from '@/lib/constants';
+import { CONTACT_INFO, SOCIAL_LINKS, NAV_LINKS } from '@/lib/constants';
+
+const SERVICE_ICONS = [Globe, Shield, Building2, Cloud, Laptop, Headphones];
+
+const solutionsCategories =
+  NAV_LINKS.find((link) => link.href === '/solutions-services')?.dropdown ?? [];
 
 export const Footer = () => {
   return (
@@ -100,28 +105,22 @@ export const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h6 className="text-lg font-semibold mb-4">Our Services</h6>
+            <h6 className="text-lg font-semibold mb-4">Solutions & Services</h6>
             <ul className="space-y-2">
-              <li className="text-gray-300 flex items-center gap-2 text-sm">
-                <Shield size={16} className="text-[#00A9E0] flex-shrink-0" />
-                Cybersecurity
-              </li>
-              <li className="text-gray-300 flex items-center gap-2 text-sm">
-                <Building2 size={16} className="text-[#00A9E0] flex-shrink-0" />
-                Infrastructure
-              </li>
-              <li className="text-gray-300 flex items-center gap-2 text-sm">
-                <Cloud size={16} className="text-[#00A9E0] flex-shrink-0" />
-                Cloud Services
-              </li>
-              <li className="text-gray-300 flex items-center gap-2 text-sm">
-                <Globe size={16} className="text-[#00A9E0] flex-shrink-0" />
-                Network Solutions
-              </li>
-              <li className="text-gray-300 flex items-center gap-2 text-sm">
-                <Headphones size={16} className="text-[#00A9E0] flex-shrink-0" />
-                24/7 Support
-              </li>
+              {solutionsCategories.map((category, index) => {
+                const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
+                return (
+                  <li key={category.category}>
+                    <Link
+                      to={category.link ?? '/solutions-services'}
+                      className="text-gray-300 hover:text-[#00A9E0] transition-colors flex items-center gap-2 text-sm"
+                    >
+                      <Icon size={16} className="text-[#00A9E0] flex-shrink-0" />
+                      {category.category}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
 

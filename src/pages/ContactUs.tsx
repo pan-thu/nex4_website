@@ -318,7 +318,7 @@ export const ContactUs = () => {
             <div className="relative h-[500px] bg-gradient-to-br from-blue-100 to-cyan-100">
               {/* Google Maps Embed */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.7837482857!2d96.12472631486537!3d16.79899998843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sMICT%20Park!5e0!3m2!1sen!2smm!4v1609459200000!5m2!1sen!2smm"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.7837482857!2d96.1285368!3d16.8505859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194ec7f9c5b3b%3A0x3c3470c11403d6ee!2sNEX4!5e0!3m2!1sen!2smm!4v1609459200000!5m2!1sen!2smm"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -336,41 +336,17 @@ export const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-800 mb-1">NEX4</h3>
-                    <p className="text-sm text-gray-600 mb-2">Building 18, MICT Park, Myanmar</p>
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-400">⭐</span>
-                      <span className="text-sm font-semibold">5.0</span>
-                      <span className="text-sm text-gray-500">(5 reviews)</span>
-                    </div>
+                    <p className="text-sm text-gray-600 mb-3">{CONTACT_INFO.address}</p>
                     <a
-                      href="https://maps.google.com/?q=MICT+Park+Yangon"
+                      href="https://maps.app.goo.gl/1f48qhVGGBKS8nzk9"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#00A9E0] text-sm hover:underline mt-2 inline-block"
+                      className="text-[#00A9E0] text-sm font-medium hover:underline inline-flex items-center gap-1"
                     >
-                      View larger map
+                      Get Directions →
                     </a>
                   </div>
                 </div>
-              </div>
-
-              {/* Location Marker Badge */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  className="flex flex-col items-center"
-                >
-                  <div className="w-16 h-16 rounded-full bg-[#00A9E0] flex items-center justify-center shadow-lg">
-                    <MapPin className="text-white" size={32} />
-                  </div>
-                  <div className="bg-white px-4 py-2 rounded-lg shadow-md mt-2">
-                    <p className="text-sm font-semibold text-gray-800">NEX4 Office Location</p>
-                    <p className="text-xs text-gray-600">MICT Park, Yangon</p>
-                  </div>
-                </motion.div>
               </div>
             </div>
           </motion.div>

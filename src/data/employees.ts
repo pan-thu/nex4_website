@@ -22,7 +22,7 @@ export const employeeData: Employee[] = [
   {
     id: 'lwin-kyaw-moe',
     name: 'Lwin Kyaw Moe',
-    position: 'Support',
+    position: 'System',
     image: '/images/team/employees/lwin_kyaw_moe.png',
   },
   {

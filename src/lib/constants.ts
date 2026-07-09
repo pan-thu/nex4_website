@@ -8,7 +8,7 @@ export const CONTACT_INFO = {
 // Company social media links (from current website)
 export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/nex4ict/',
-  twitter: 'https://twitter.com/nex4ict?s=09',
+  twitter: 'https://x.com/nex4ict',
   linkedin: 'https://www.linkedin.com/company/nex4ict',
   youtube: 'https://www.youtube.com/channel/UCwcOIHDbgoaKzGM3LG-ACRg',
 };
