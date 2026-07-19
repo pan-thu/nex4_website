@@ -28,6 +28,7 @@ export const sdWanData: ServicePageData = {
     logos: [
       { name: 'Cisco', logo: '/images/partners/cisco.png' },
       { name: 'Huawei', logo: '/images/partners/huawei-plain.png' },
+      { name: 'Fortinet', logo: '/images/partners/fortinet.png' },
     ],
   },
   missions: [],
