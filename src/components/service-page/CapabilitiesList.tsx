@@ -26,19 +26,26 @@ export const CapabilitiesList = ({ capabilities }: Props) => {
 
         {/* Checklist Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5 max-w-4xl mx-auto">
-          {capabilities.items.map((item, index) => (
-            <motion.div
-              key={item}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-100"
-            >
-              <TbCircleCheck className="text-[#00A9E0] flex-shrink-0 mt-0.5" size={22} />
-              <span className="text-gray-700 leading-relaxed">{item}</span>
-            </motion.div>
-          ))}
+          {capabilities.items.map((item, index) => {
+            const isLastOdd =
+              capabilities.items.length % 2 === 1 && index === capabilities.items.length - 1;
+
+            return (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                className={`flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-100 ${
+                  isLastOdd ? 'md:col-span-2 md:max-w-[calc(50%-1.25rem)] md:mx-auto' : ''
+                }`}
+              >
+                <TbCircleCheck className="text-[#00A9E0] flex-shrink-0 mt-0.5" size={22} />
+                <span className="text-gray-700 leading-relaxed">{item}</span>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
