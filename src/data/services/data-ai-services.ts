@@ -26,7 +26,7 @@ export const dataAiServicesData: ServicePageData = {
   partners: {
     sectionTitle: 'Our Cloud Partners',
     logos: [
-      { name: 'AWS', logo: '/images/partners/aws.jpeg' },
+      { name: 'AWS', logo: '/images/partners/aws.png' },
       { name: 'Microsoft', logo: '/images/partners/microsoft-plain.png' },
     ],
   },

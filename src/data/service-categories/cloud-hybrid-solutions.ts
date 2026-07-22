@@ -37,7 +37,7 @@ export const cloudHybridSolutionsData: ServiceCategoryPageData = {
   partners: {
     sectionTitle: 'Our Cloud Partners',
     logos: [
-      { name: 'AWS', logo: '/images/partners/aws.jpeg' },
+      { name: 'AWS', logo: '/images/partners/aws.png' },
       { name: 'Microsoft Azure', logo: '/images/partners/microsoft-azure.png' },
       { name: 'Huawei', logo: '/images/partners/huawei-plain.png' },
       { name: 'Alibaba.com', logo: '/images/partners/alibaba.png' },

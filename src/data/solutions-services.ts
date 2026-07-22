@@ -106,7 +106,7 @@ export const solutionsServicesData: HubPageData = {
       { name: 'Red Hat', logo: '/images/partners/red-hat.png' },
       { name: 'Nutanix', logo: '/images/partners/nutanix.png' },
       { name: 'Veritas', logo: '/images/partners/veritas.png' },
-      { name: 'AWS', logo: '/images/partners/aws.jpeg' },
+      { name: 'AWS', logo: '/images/partners/aws.png' },
       { name: 'Microsoft Azure', logo: '/images/partners/microsoft-azure.png' },
       { name: 'Alibaba.com', logo: '/images/partners/alibaba.png' },
     ],
