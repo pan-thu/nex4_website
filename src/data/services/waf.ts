@@ -7,7 +7,7 @@ export const wafData: ServicePageData = {
   hero: {
     title: 'WEB APPLICATION FIREWALL (WAF)',
     titleHighlight: 'WAF',
-    description: 'Web-facing applications are a primary target for attackers. NEX4 implements F5 BIG-IP and Imperva WAF to defend against OWASP Top 10, SQL injection, XSS and layer-7 DDoS — protecting revenue and customer data at the application layer.',
+    description: 'Web-facing applications are a primary target for cyberattacks. NEX4 delivers F5 BIG-IP, Fortinet FortiWeb, and Imperva Web Application Firewall solutions to protect business-critical applications, revenue, and customer data against OWASP Top 10 vulnerabilities, SQL injection, cross-site scripting (XSS), application-layer attacks, bots, and Layer-7 DDoS threats.',
     ctaText: 'Contact Us',
     ctaLink: '/contact-us',
     image: '/images/services/Canva-internet-security-concept.-cyber-security.-1024x683-1-e1580120323813.jpg',
@@ -15,12 +15,15 @@ export const wafData: ServicePageData = {
   capabilities: {
     sectionTitle: 'Key Capabilities',
     items: [
-      'WAF deployment (F5 BIG-IP / Imperva)',
-      'Application attack surface assessment',
-      'OWASP Top 10 policy configuration',
-      'SSL offload & certificate management',
-      'DDoS layer-7 protection',
-      'WAF managed service (signature updates)',
+      'WAF deployment using F5 BIG-IP, Fortinet FortiWeb, or Imperva',
+      'Application security assessment and policy design',
+      'OWASP Top 10 protection and policy configuration',
+      'SQL injection and XSS prevention',
+      'Bot management and application-layer DDoS protection',
+      'SSL/TLS certificate management and traffic inspection',
+      'Virtual patching for application vulnerabilities',
+      'API security and application traffic monitoring',
+      'Managed WAF services, policy tuning, and signature updates',
     ],
   },
   partners: {
@@ -28,6 +31,7 @@ export const wafData: ServicePageData = {
     logos: [
       { name: 'F5', logo: '/images/partners/f5-plain.png' },
       { name: 'Fortinet', logo: '/images/partners/fortinet.png' },
+      { name: 'Imperva', logo: '/images/partners/imperva.png' },
     ],
   },
   missions: [],
