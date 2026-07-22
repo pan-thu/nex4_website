@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -104,54 +104,34 @@ export const ContactSection = () => {
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg"
+                  className="p-4 bg-gray-50 rounded-lg"
                 >
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Address</h4>
-                    <p className="text-gray-600">{CONTACT_INFO.address}</p>
-                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-1">Address</h4>
+                  <p className="text-gray-600">{CONTACT_INFO.address}</p>
                 </motion.div>
 
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg"
+                  className="p-4 bg-gray-50 rounded-lg"
                 >
-                  <div className="w-12 h-12 bg-accent-green rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
-                    <p className="text-gray-600">{CONTACT_INFO.phone}</p>
-                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
+                  <p className="text-gray-600">{CONTACT_INFO.phone}</p>
                 </motion.div>
 
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg"
+                  className="p-4 bg-gray-50 rounded-lg"
                 >
-                  <div className="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
-                    <p className="text-gray-600">{CONTACT_INFO.email}</p>
-                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
+                  <p className="text-gray-600">{CONTACT_INFO.email}</p>
                 </motion.div>
 
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg"
+                  className="p-4 bg-gray-50 rounded-lg"
                 >
-                  <div className="w-12 h-12 bg-accent-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Business Hours</h4>
-                    <p className="text-gray-600">{CONTACT_INFO.hours}</p>
-                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-1">Business Hours</h4>
+                  <p className="text-gray-600">{CONTACT_INFO.hours}</p>
                 </motion.div>
               </div>
             </div>
