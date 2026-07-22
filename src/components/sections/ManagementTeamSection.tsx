@@ -1,10 +1,25 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TeamMemberCard } from '@/components/common/TeamMemberCard';
 import { useCarousel } from '@/hooks/useCarousel';
 import { leadershipData } from '@/data/leadership';
 
+const getItemsPerView = () => {
+  if (typeof window === 'undefined') return 3;
+  if (window.innerWidth < 480) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+};
+
 export const ManagementTeamSection = () => {
+  const [itemsPerView, setItemsPerView] = useState(getItemsPerView);
+
+  useEffect(() => {
+    const handleResize = () => setItemsPerView(getItemsPerView());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const { currentIndex, goToIndex, goToNext, goToPrev, setIsPaused } = useCarousel({
     totalItems: leadershipData.length,
     autoPlay: true,
@@ -26,7 +41,6 @@ export const ManagementTeamSection = () => {
     return () => el.removeEventListener('wheel', handleWheel);
   }, [handleWheel]);
 
-  const itemsPerView = 3;
   const visibleMembers = leadershipData.slice(
     currentIndex,
     currentIndex + itemsPerView
@@ -153,7 +167,7 @@ export const ManagementTeamSection = () => {
                       x: { type: "spring", stiffness: 300, damping: 30 },
                       opacity: { duration: 0.2 }
                     }}
-                    className="flex flex-wrap justify-evenly gap-y-4 absolute w-full"
+                    className="flex flex-nowrap justify-evenly gap-x-4 absolute w-full"
                   >
                     {visibleMembers.map((member, index) => (
                       <TeamMemberCard
