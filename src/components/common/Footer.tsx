@@ -164,7 +164,7 @@ export const Footer = () => {
         <div className="container mx-auto px-8 md:px-12 lg:px-16 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 NEX4 ICT Solutions. All rights reserved.
+              © 2026 NEX4 ICT Solutions. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               {[
