@@ -49,7 +49,7 @@ export const PartnersSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             />
-            <p className="text-sm font-semibold text-[#00A9E0] tracking-widest uppercase">Trusted Partners</p>
+            <p className="text-sm font-semibold text-[#00A9E0] tracking-widest uppercase">Partner Accreditations</p>
             <motion.div
               className="h-[2px] w-12 bg-gradient-to-l from-transparent to-[#00A9E0]"
               initial={{ width: 0 }}
@@ -59,10 +59,10 @@ export const PartnersSection = () => {
             />
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a4f] mb-4">
-            Our{' '}
+            Certified Partner{' '}
             <span className="relative">
               <span className="bg-gradient-to-r from-[#00A9E0] to-[#00C4FF] bg-clip-text text-transparent">
-                Partners
+                Status
               </span>
               <motion.span
                 className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-[#00A9E0] to-[#00C4FF] rounded-full"
@@ -74,7 +74,7 @@ export const PartnersSection = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-500 max-w-3xl mx-auto">
-            Collaborating with industry leaders to deliver world-class solutions
+            Recognized partner tiers earned through demonstrated competency
           </p>
         </motion.div>
 
