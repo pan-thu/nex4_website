@@ -10,7 +10,6 @@ export const partnerLogos: Partner[] = [
 
   // AWS
   { id: 'aws-advanced-gold', name: 'AWS Advanced Tier Gold', logo: '/images/partners/aws_advanced_gold.png' },
-  { id: 'aws-advanced-official', name: 'AWS Advanced Tier', logo: '/images/partners/aws_advanced_official.png' },
   { id: 'aws-select-training', name: 'AWS Select Tier Training', logo: '/images/partners/aws_select_training.png' },
   { id: 'aws-wapp', name: 'AWS Well-Architected Partner', logo: '/images/partners/aws_wapp.png' },
 
