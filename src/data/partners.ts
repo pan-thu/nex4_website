@@ -15,7 +15,8 @@ export const partnerLogos: Partner[] = [
   { id: 'aws-wapp', name: 'AWS Well-Architected Partner', logo: '/images/partners/aws_wapp.png' },
 
   // Microsoft
-  { id: 'microsoft', name: 'Microsoft', logo: '/images/partners/microsoft.png' },
+  { id: 'microsoft', name: 'Microsoft Solutions Partner - Modern Work', logo: '/images/partners/microsoft.png' },
+  { id: 'microsoft-security', name: 'Microsoft Solutions Partner - Security', logo: '/images/partners/microsoft_security.png' },
 
   // Broadcom
   { id: 'broadcom', name: 'Broadcom', logo: '/images/partners/broadcom.png' },
