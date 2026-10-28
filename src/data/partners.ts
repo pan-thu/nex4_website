@@ -16,6 +16,7 @@ export const partnerLogos: Partner[] = [
   // Microsoft
   { id: 'microsoft', name: 'Microsoft Solutions Partner - Modern Work', logo: '/images/partners/microsoft.png' },
   { id: 'microsoft-security', name: 'Microsoft Solutions Partner - Security', logo: '/images/partners/microsoft_security.png' },
+  { id: 'microsoft-data-ai', name: 'Microsoft Solutions Partner - Data & AI (Azure)', logo: '/images/partners/microsoft_data_ai.png' },
 
   // Broadcom
   { id: 'broadcom', name: 'Broadcom', logo: '/images/partners/broadcom.png' },

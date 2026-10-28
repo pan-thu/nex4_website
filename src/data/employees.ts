@@ -47,7 +47,7 @@ export const employeeData: Employee[] = [
     id: 'paing-hein-kyaw',
     name: 'Paing Hein Kyaw',
     position: 'System & Microsoft',
-    image: '/images/team/employees/paing_hein_kyaw.png',
+    image: '/images/team/employees/paing_hein_kyaw.jpg',
   },
   {
     id: 'thant-zin',
